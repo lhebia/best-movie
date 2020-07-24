@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Header from './../components/Header';
+import './../App.css';
 
 export default function HomePage() {
 
@@ -25,8 +28,11 @@ export default function HomePage() {
     }, [])
 
     return (
-        <div>
+      <div className="App wrapper">
+        <Router>
+            <Header />
             <h1>Hello, movie heads!</h1>
-        </div>
-    )
+        </Router>
+      </div>
+    );
 }
