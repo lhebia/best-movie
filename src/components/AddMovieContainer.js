@@ -1,11 +1,12 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import StyledHeading from './../styles/styledHeading';
+// import styled from '@emotion/styled';
 
-const StyledHeading = styled.h2`
-    text-align: center;
-    font-size: 5rem;
-    text-transform: uppercase;
-`;
+// const StyledHeading = styled.h2`
+//     text-align: center;
+//     font-size: 5rem;
+//     text-transform: uppercase;
+// `;
 
 export default function AddMovieContainer() {
     return (

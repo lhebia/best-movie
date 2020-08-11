@@ -1,11 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
-
-const StyledHeading = styled.h2`
-    text-align: center;
-    font-size: 5rem;
-    text-transform: uppercase;
-`;
+import StyledHeading from './../styles/styledHeading';
 
 export default function LeaderboardContainer() {
     return (
