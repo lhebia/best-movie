@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './../components/Header';
 import MovieContainer from './../components/MovieContainer';
+import LeaderboardContainer from './../components/LeaderboardContainer';
+import AddMovieContainer from './../components/AddMovieContainer';
 import MovieTile from './../components/MovieTile';
 import './../App.css';
 
@@ -57,17 +59,27 @@ export default function HomePage() {
         <Router>
           <Header />
           <h1>Hello, movie heads!</h1>
-          <MovieContainer>
-            {movieState.map((movie) => {
-              return (
-                <MovieTile
-                  title={movie.title}
-                  id={movie.id}
-                //   posterPath={`${movieConfig.images.secure_base_url}${movie.poster_path}`}
-                />
-              );
-            })}
-          </MovieContainer>
+          <Route exact path="/" render={() => {
+            return (
+              <MovieContainer>
+                {movieState.map((movie) => {
+                  return (
+                    <MovieTile
+                      title={movie.title}
+                      id={movie.id}
+                    //   posterPath={`${movieConfig.images.secure_base_url}${movie.poster_path}`}
+                    />
+                  );
+                })}
+              </MovieContainer>
+            )
+          }} />
+          <Route path="/leaderboard">
+            <LeaderboardContainer />
+          </Route>
+          <Route path="/add">
+            <AddMovieContainer />
+          </Route>
         </Router>
       </div>
     );

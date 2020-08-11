@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
+import styled from '@emotion/styled';
+
+const Tile = styled.div`
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 1rem;
+`;
 
 export default function MovieTile(props) {
     return (
-        <div key={props.id}>
+        <Tile key={props.id}>
             {/* <img src={props.posterPath} alt={props.title} /> */}
             <p>{props.title}</p>
             {/* <p>{props.overview}</p> */}
-        </div>
+        </Tile>
     )
 }

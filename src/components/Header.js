@@ -20,9 +20,6 @@ export default function Header() {
             <Link to="/add">
               <li>Add Movie</li>
             </Link>
-            <Link to="/trending">
-              <li>Trending</li>
-            </Link>
           </ul>
         </nav>
       </div>
