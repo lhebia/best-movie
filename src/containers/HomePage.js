@@ -5,6 +5,7 @@ import MovieContainer from './../components/MovieContainer';
 import LeaderboardContainer from './../components/LeaderboardContainer';
 import AddMovieContainer from './../components/AddMovieContainer';
 import MovieTile from './../components/MovieTile';
+import Smash from './../containers/Smash';
 import './../App.css';
 
 export default function HomePage() {
@@ -58,20 +59,22 @@ export default function HomePage() {
       <div className="App wrapper">
         <Router>
           <Header />
-          <h1>Hello, movie heads!</h1>
           <Route exact path="/" render={() => {
             return (
-              <MovieContainer>
-                {movieState.map((movie) => {
-                  return (
-                    <MovieTile
-                      title={movie.title}
-                      id={movie.id}
-                    //   posterPath={`${movieConfig.images.secure_base_url}${movie.poster_path}`}
-                    />
-                  );
-                })}
-              </MovieContainer>
+              <>
+                <Smash />
+                <MovieContainer>
+                  {movieState.map((movie) => {
+                    return (
+                      <MovieTile
+                        title={movie.title}
+                        id={movie.id}
+                      //   posterPath={`${movieConfig.images.secure_base_url}${movie.poster_path}`}
+                      />
+                    );
+                  })}
+                </MovieContainer>
+              </>
             )
           }} />
           <Route path="/leaderboard">

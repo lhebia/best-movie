@@ -1,16 +1,35 @@
 import React from 'react';
-import './Header.css';
 import { Link } from 'react-router-dom';
+import styled from '@emotion/styled';
+
+const HeaderContainer = styled.div`
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 10vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+`;
+
+const FlexDiv = styled.div`
+  display: flex;
+`;
+
+const FlexUl = styled.ul`
+  display: flex;
+`;
 
 export default function Header() {
     return (
-      <div className="Header flexContainer">
-        <div className="flexContainer">
+      <HeaderContainer>
+        <FlexDiv>
           <span role="img" aria-label="Popcorn Logo">🍿</span>
           <h1>MovieSmash</h1>
-        </div>
+        </FlexDiv>
         <nav>
-          <ul className="flexContainer">
+          <FlexUl>
             <Link to="/">
               <li>Home</li>
             </Link>
@@ -20,8 +39,8 @@ export default function Header() {
             <Link to="/add">
               <li>Add Movie</li>
             </Link>
-          </ul>
+          </FlexUl>
         </nav>
-      </div>
+      </HeaderContainer>
     );
 }
