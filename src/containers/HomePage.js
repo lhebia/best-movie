@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from './../components/Header';
 import MovieContainer from './../components/MovieContainer';
 import LeaderboardContainer from './../components/LeaderboardContainer';
@@ -11,7 +11,7 @@ export default function HomePage() {
 
     const [movieState, setMovieState] = useState([]); 
     const [movieConfig, setMovieConfig] = useState();
-    const [hasError, setErrors] = useState(false);
+    // const [hasError, setErrors] = useState(false);
 
     useEffect(() => {
 
@@ -25,7 +25,7 @@ export default function HomePage() {
             res
                 .json()
                 .then(res => setMovieState(res.results))
-                .catch(err => setErrors(err));
+                // .catch(err => setErrors(err));
         }
 
         fetchData();
