@@ -14,14 +14,14 @@ const SmashTile = styled.div`
     border-radius: 5px;
 `;
 
-export default function Smash() {
+export default function Smash({ trendingUrl, setTrendingUrl }) {
     return (
         <Container>
             <SmashTile>
                 <p>Movie One</p>
             </SmashTile>
             <SmashTile> 
-                <button><p>Smash Button</p></button>
+                <button onClick={() => setTrendingUrl(trendingUrl)}><p>Smash Button</p></button>
             </SmashTile>
             <SmashTile>
                 <p>Movie Two</p>
