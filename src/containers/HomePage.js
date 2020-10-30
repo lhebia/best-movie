@@ -11,7 +11,7 @@ import MovieTile from './../components/MovieTile';
 import Smash from './../containers/Smash';
 import './../App.css';
 
-export default function HomePage() {
+const HomePage = () => {
 
     const initialUrl = "https://api.themoviedb.org/3/trending/movie/day?page=1";
 
@@ -76,3 +76,5 @@ export default function HomePage() {
       </div>
     );
 }
+
+export default HomePage;
