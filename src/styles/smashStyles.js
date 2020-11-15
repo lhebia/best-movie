@@ -7,7 +7,7 @@ export const SmashContainer = styled.div`
     margin-bottom: 5rem;
 `;
 
-export const SmashTile = styled.div`
+export const SmashTile = styled.button`
     padding: 1rem;
     border: 1px solid white;
     border-radius: 5px;

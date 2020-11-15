@@ -8,8 +8,8 @@ export default function Smash({ trendingUrl, setTrendingUrl }) {
             <SmashTile>
                 <p>Movie One</p>
             </SmashTile>
-            <SmashTile> 
-                <button onClick={() => setTrendingUrl(trendingUrl)}><p>Smash</p></button>
+            <SmashTile onClick={() => console.log('Smash')}> 
+                <p>Smash</p>
             </SmashTile>
             <SmashTile>
                 <p>Movie Two</p>

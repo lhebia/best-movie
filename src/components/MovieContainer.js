@@ -8,10 +8,10 @@ const Container = styled.div`
     grid-gap: 1rem;
 `;
 
-export default function MovieContainer(props) {
+export default function MovieContainer({ children }) {
     return (
         <Container>
-            {props.children}
+            {children}
         </Container>
     )
 }
